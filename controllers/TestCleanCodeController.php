@@ -4,9 +4,9 @@ namespace app\controllers;
 
 class TestCleanCodeController extends \yii\web\Controller
 {
-    public function actionIndex()
+    public function actionSum($num1, $num2)
     {
-        return $this->render('index');
+        return $num1 + $num2;
     }
 
 }

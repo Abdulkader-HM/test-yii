@@ -43,7 +43,7 @@ AppAsset::register($this);
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
                 ['label' => 'test Html', 'url' => ['site/test-html']],
-                ['label' => 'Sum page', 'url' => ['sum/sum', 'num1' => 2, 'num2' => 5]],
+                ['label' => 'Sum page', 'url' => ['test-clean-code/sum', 'num1' => 2, 'num2' => 5]],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]
                 ) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])

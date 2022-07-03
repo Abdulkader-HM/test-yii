@@ -44,6 +44,7 @@ AppAsset::register($this);
                 ['label' => 'Contact', 'url' => ['/site/contact']],
                 ['label' => 'test Html', 'url' => ['site/test-html']],
                 ['label' => 'Sum page', 'url' => ['test-clean-code/sum', 'num1' => 2, 'num2' => 5]],
+                ['label' => 'clean code', 'url' => ['test-clean-code/template']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]
                 ) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
@@ -78,6 +79,8 @@ AppAsset::register($this);
     </footer>
 
     <?php $this->endBody() ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    // 'layout' => 'secondary',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -17,8 +18,15 @@ $config = [
             'theme' => [
                 'pathMap' => [
                     '@app/views' => '@app/themes/views',
+
                 ]
             ]
+        ],
+        'layout' => 'base',
+
+
+        'Helper' => [
+            'class' => 'app\components\Helper',
         ],
 
         'request' => [
@@ -58,6 +66,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [],
         ],
+
+
 
     ],
     'params' => $params,

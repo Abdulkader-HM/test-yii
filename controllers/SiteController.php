@@ -12,6 +12,7 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $layout = '@app/themes/layout/base';
     /**
      * {@inheritdoc}
      */
@@ -61,6 +62,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        // Yii::$app->Helper->hello();
+        // die();
         return $this->render('index');
     }
 
@@ -130,6 +133,4 @@ class SiteController extends Controller
     {
         return $this->render('test-html');
     }
-
-
 }

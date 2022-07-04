@@ -1,3 +1,16 @@
+<?php
+
+/** @var yii\web\View $this */
+/** @var string $content */
+
+use app\assets\AppAsset;
+use app\widgets\Alert;
+use yii\bootstrap4\Breadcrumbs;
+use yii\helpers\Url;
+
+AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +21,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <?php $this->registerCsrfMetaTags() ?>
+    <?php $this->head() ?>
 
     <title>SB Admin 2 - Dashboard</title>
 
@@ -29,7 +45,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php Url::to(['store/index']); ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -41,7 +57,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php Url::to(['store/index']); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -63,8 +79,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/buttons']); ?>">Buttons</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/cards']); ?>">Cards</a>
                     </div>
                 </div>
             </li>
@@ -78,10 +94,10 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-color']); ?>">Colors</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-border']); ?>">Borders</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-animation']); ?>">Animations</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-other']); ?>">Other</a>
                     </div>
                 </div>
             </li>
@@ -103,27 +119,27 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/login']); ?>">Login</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/register']); ?>">Register</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/forgot-password']); ?>">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/error']); ?>">404 Page</a>
+                        <a class="collapse-item" href="<?php Url::to(['store/blank']); ?>">Blank Page</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="<?php Url::to(['store/charts']); ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?php Url::to(['store/tables']); ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
             </li>
@@ -329,12 +345,8 @@
                 <!-- End of Topbar -->
 
 
-
-
+                <?= Alert::widget() ?>
                 <?= $content ?>
-
-
-
 
                 <!-- Footer -->
                 <footer class="sticky-footer bg-white">
@@ -370,11 +382,14 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="<?php Url::to(['store/login']); ?>">Logout</a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <?php $this->endBody() ?>
+
 
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
@@ -393,6 +408,10 @@
         <script src="js/demo/chart-area-demo.js"></script>
         <script src="js/demo/chart-pie-demo.js"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
+<?php $this->endPage() ?>

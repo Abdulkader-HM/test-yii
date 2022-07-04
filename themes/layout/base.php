@@ -50,6 +50,7 @@ AppAsset::register($this);
                                 ['label' => 'test Html', 'url' => ['site/test-html']],
                                 ['label' => 'Sum page', 'url' => ['test-clean-code/sum', 'num1' => 2, 'num2' => 5]],
                                 ['label' => 'clean code', 'url' => ['test-clean-code/template']],
+                                ['label' => 'store', 'url' => ['store/index']],
                                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]
                                 ) : ('<li>'
                                     . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])

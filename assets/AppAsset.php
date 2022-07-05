@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link http://www.yiiframework.com/
  * @copyright Copyright (c) 2008 Yii Software LLC
@@ -21,8 +22,11 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'themes/css/sb-admin-2.min.css',
     ];
     public $js = [
+        'themes/js/chart-area-demo.js',
+        'chart-pie-demo.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

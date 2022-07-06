@@ -25,7 +25,7 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <?php $this->head() ?>
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title><?php echo Yii::t('app', 'SB Admin 2 - Dashboard'); ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -49,7 +49,7 @@ AppAsset::register($this);
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3"><?php echo Yii::t('app', 'SB Admin'); ?> <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -59,7 +59,7 @@ AppAsset::register($this);
             <li class="nav-item active">
                 <a class="nav-link" href="<?php Url::to(['store/index']); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span><?php echo Yii::t('app', 'Dashboard'); ?></span></a>
             </li>
 
             <!-- Divider -->
@@ -67,20 +67,20 @@ AppAsset::register($this);
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                <?php echo Yii::t('app', 'Interface'); ?>
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span><?php echo Yii::t('app', 'Components'); ?></span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="<?php Url::to(['store/buttons']); ?>">Buttons</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/cards']); ?>">Cards</a>
+                        <h6 class="collapse-header"><?php echo Yii::t('app', 'Custom Components'); ?>:</h6>
+                        <a class="collapse-item" href="<?php Url::to(['store/buttons']); ?>"><?php echo Yii::t('app', 'Buttons'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/cards']); ?>"><?php echo Yii::t('app', 'Cards'); ?></a>
                     </div>
                 </div>
             </li>
@@ -93,11 +93,11 @@ AppAsset::register($this);
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="<?php Url::to(['store/utilities-color']); ?>">Colors</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/utilities-border']); ?>">Borders</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/utilities-animation']); ?>">Animations</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/utilities-other']); ?>">Other</a>
+                        <h6 class="collapse-header"><?php echo Yii::t('app', 'Custom Utilities'); ?>:</h6>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-color']); ?>"><?php echo Yii::t('app', 'Colors'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-border']); ?>"><?php echo Yii::t('app', 'Borders'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-animation']); ?>"><?php echo Yii::t('app', 'Animations'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/utilities-other']); ?>"><?php echo Yii::t('app', 'Other'); ?></a>
                     </div>
                 </div>
             </li>
@@ -107,25 +107,25 @@ AppAsset::register($this);
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                <?php echo Yii::t('app', 'Addons'); ?>
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span><?php echo Yii::t('app', 'Pages'); ?></span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="<?php Url::to(['store/login']); ?>">Login</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/register']); ?>">Register</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/forgot-password']); ?>">Forgot Password</a>
+                        <h6 class="collapse-header"><?php echo Yii::t('app', 'Login Screens'); ?>:</h6>
+                        <a class="collapse-item" href="<?php Url::to(['store/login']); ?>"><?php echo Yii::t('app', 'Login'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/register']); ?>"><?php echo Yii::t('app', 'Register'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/forgot-password']); ?>"><?php echo Yii::t('app', 'Forgot Password'); ?></a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="<?php Url::to(['store/error']); ?>">404 Page</a>
-                        <a class="collapse-item" href="<?php Url::to(['store/blank']); ?>">Blank Page</a>
+                        <h6 class="collapse-header"><?php echo Yii::t('app', 'Other Pages'); ?>:</h6>
+                        <a class="collapse-item" href="<?php Url::to(['store/error']); ?>"><?php echo Yii::t('app', '404 Page'); ?></a>
+                        <a class="collapse-item" href="<?php Url::to(['store/blank']); ?>"><?php echo Yii::t('app', 'Blank Page'); ?></a>
                     </div>
                 </div>
             </li>
@@ -134,14 +134,14 @@ AppAsset::register($this);
             <li class="nav-item">
                 <a class="nav-link" href="<?php Url::to(['store/charts']); ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span><?php echo Yii::t('app', 'Charts'); ?></span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="<?php Url::to(['store/tables']); ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span><?php echo Yii::t('app', 'Tables'); ?></span></a>
             </li>
 
             <!-- Divider -->
@@ -214,7 +214,7 @@ AppAsset::register($this);
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
-                                    Alerts Center
+                                    <?php echo Yii::t('app', 'Alerts Center'); ?>
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
@@ -223,8 +223,8 @@ AppAsset::register($this);
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500"> <?php echo Yii::t('app', 'December 12, 2019'); ?></div>
+                                        <span class="font-weight-bold"><?php echo Yii::t('app', 'A new monthly report is ready to download'); ?>!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -234,8 +234,8 @@ AppAsset::register($this);
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500"><?php echo Yii::t('app', 'December 7, 2019'); ?></div>
+                                        <?php echo Yii::t('app', ' $290.29 has been deposited into your account'); ?>!
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -245,11 +245,11 @@ AppAsset::register($this);
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500"><?php echo Yii::t('app', 'December 2, 2019'); ?></div>
+                                        <?php echo Yii::t('app', 'Spending Alert: We\'ve noticed unusually high spending for your account'); ?>.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#"><?php echo Yii::t('app', 'Show All Alerts'); ?></a>
                             </div>
                         </li>
 
@@ -263,7 +263,7 @@ AppAsset::register($this);
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
-                                    Message Center
+                                    <?php echo Yii::t('app', 'Message Center'); ?>
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
@@ -271,8 +271,8 @@ AppAsset::register($this);
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                        <div class="text-truncate"><?php echo Yii::t('app', 'Hi there! I am wondering if you can help me with a problem I\'ve been having'); ?>.</div>
+                                        <div class="small text-gray-500"><?php echo Yii::t('app', 'Emily Fowler'); ?> · 58m</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -281,8 +281,8 @@ AppAsset::register($this);
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                        <div class="text-truncate"><?php echo Yii::t('app', 'I have the photos that you ordered last month, how would you like them sent to you'); ?>?</div>
+                                        <div class="small text-gray-500"><?php echo Yii::t('app', 'Jae Chun'); ?> · 1d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -291,8 +291,8 @@ AppAsset::register($this);
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                        <div class="text-truncate"><?php echo Yii::t('app', 'Last month\'s report looks great, I am very happy with the progress so far, keep up the good work'); ?>!</div>
+                                        <div class="small text-gray-500"> <?php echo Yii::t('app', 'Morgan Alvarez'); ?>· 2d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -301,11 +301,11 @@ AppAsset::register($this);
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                        <div class="text-truncate"><?php echo Yii::t('app', 'Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren\'t good'); ?>...</div>
+                                        <div class="small text-gray-500"><?php echo Yii::t('app', 'Chicken the Dog'); ?> · 2w</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#"><?php echo Yii::t('app', 'Read More Messages'); ?></a>
                             </div>
                         </li>
 
@@ -314,27 +314,27 @@ AppAsset::register($this);
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo Yii::t('app', 'Valerie Luna'); ?></span>
                                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    <?php echo Yii::t('app', 'Profile'); ?>
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    <?php echo Yii::t('app', 'Settings'); ?>
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
+                                    <?php echo Yii::t('app', 'Activity Log'); ?>
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    <?php echo Yii::t('app', 'Logout'); ?>
                                 </a>
                             </div>
                         </li>
@@ -352,7 +352,7 @@ AppAsset::register($this);
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2020</span>
+                            <span><?php echo Yii::t('app', 'Copyright'); ?> &copy; <?php echo Yii::t('app', 'Your Website'); ?> 2020</span>
                         </div>
                     </div>
                 </footer>
@@ -374,15 +374,15 @@ AppAsset::register($this);
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel"><?php echo Yii::t('app', 'Ready to Leave'); ?>?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body"><?php echo Yii::t('app', 'Select "Logout" below if you are ready to end your current session'); ?>.</div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="<?php Url::to(['store/login']); ?>">Logout</a>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal"><?php echo Yii::t('app', 'Cancel'); ?></button>
+                        <a class="btn btn-primary" href="<?php Url::to(['store/login']); ?>"><?php echo Yii::t('app', 'Logout'); ?></a>
                     </div>
                 </div>
             </div>

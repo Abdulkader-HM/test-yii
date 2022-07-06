@@ -9,6 +9,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -62,9 +63,25 @@ AppAsset::register($this);
                                     . '</li>'
                                 )
                             ],
+
                         ]);
                         NavBar::end();
+
                         ?>
+
+                        <?php
+                        // foreach (Yii::$app->params['languages'] as $key => $language) {
+                        //     echo '<span class="language" id="' . $key . '">' . $language . '|</span>';
+                        // }
+
+                        ?>
+                        <form action="<?php Url::to(['test-clean-code/Languages']); ?>" method="GET">
+                            <button type="submit" name='lang' value="ar">Arabic</button>
+                            <button type="submit" name='lang' value="ru">Russian</button>
+                            <button type="submit" name='lang' value="en">English</button>
+                        </form>
+
+
                     </span>
                 </button>
             </div>
